@@ -1,5 +1,6 @@
 package br.com.qrcodegeneration.model;
 
+import com.google.gson.Gson;
 import io.swagger.annotations.ApiModelProperty;
 
 public class QRCode {
@@ -32,5 +33,11 @@ public class QRCode {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        Gson gson = new Gson();
+        return gson.toJson(this);
     }
 }
