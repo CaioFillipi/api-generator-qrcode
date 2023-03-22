@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value="/api/v1")
 public class QRCodeController implements QRCodeControllerInterf {
 
-    @Autowired
-    private QRCodeService service;
+    private final QRCodeService service;
+
+    public QRCodeController(QRCodeService service) {
+        this.service = service;
+    }
 
     private static Logger logger = LoggerFactory.getLogger(QrcodeGenerationApplication.class);
 

@@ -5,18 +5,18 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class QRCode {
     @ApiModelProperty(value = "Value that will be inserted in qr code")
-    private String value;
+    private String url;
     @ApiModelProperty(value = "Width for QRCode Generated")
     private int width;
     @ApiModelProperty(value = "Height for QRCode generated")
     private int height;
 
     public String getValue() {
-        return value;
+        return url;
     }
 
     public void setValue(String value) {
-        this.value = value;
+        this.url = value;
     }
 
     public int getWidth() {
