@@ -36,7 +36,12 @@ Resposta da API:
 ![image](https://user-images.githubusercontent.com/19175715/226942304-85e00a51-04c2-474d-8f2d-9558bcbbe4ef.png)
 
 <h2>Executando projeto com Docker</h2>
-Caso queira executar o projeto pelo docker, basta ir até a raiz do projeto e xecutar o comando:
+Caso queira executar o projeto pelo docker, basta ir até a raiz do projeto e executar o comando para a geração do JAR:
+
+```
+mvn package
+```
+Com o JAR gerado execute:
 
 ```
 docker build -t caio/api-qr-code:1.0 .
