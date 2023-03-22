@@ -3,6 +3,7 @@
   <img src="https://img.shields.io/static/v1?label=Maven&message=>= 3.6&color=blue&style=for-the-badge&logo=APACHE"/>
   <img src="https://img.shields.io/static/v1?label=java&message=17&color=orange&style=for-the-badge&logo=JAVA"/>
   <img src="https://img.shields.io/static/v1?label=git&message=SCM&color=black&style=for-the-badge&logo=git"/>
+  ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 <h1>API QRCode Generator</h1>
 API desenvolvida para a geração de qrcodes.
 
@@ -33,3 +34,17 @@ Dados da requisição:
 Resposta da API:
 
 ![image](https://user-images.githubusercontent.com/19175715/226942304-85e00a51-04c2-474d-8f2d-9558bcbbe4ef.png)
+
+<h2>Executando projeto com Docker</h2>
+Caso queira executar o projeto pelo docker, basta ir até a raiz do projeto e xecutar o comando:
+
+```
+docker build -t caio/api-qr-code:1.0 .
+```
+Com isso o docker irá realizar o build da imagem, após finalizar basta executar o seguinte comando para subir um container com a imagem criada:
+
+```
+docker container run -d -p 8080:8080 caio/api-qr-code:1.0
+```
+
+Pronto, o projeto está rodando com o docker
